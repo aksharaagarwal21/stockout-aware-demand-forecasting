@@ -1,0 +1,7 @@
+variant,mechanism,encoder_length,learning_rate,tuning_WAPE_donors
+direct,A,14,0.03,0.45269682174160003
+direct,B,14,0.03,0.45141835591159124
+direct,C,14,0.03,0.4532770911054908
+recovered,A,14,0.03,0.41403285781484706
+recovered,B,14,0.03,0.4125431071006646
+recovered,C,28,0.03,0.41544998653668286

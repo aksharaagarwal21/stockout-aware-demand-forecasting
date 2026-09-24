@@ -1,0 +1,4 @@
+run_dir,n_series,fast_mode,completed_utc,all_gates_pass,failed_checks,open_checks,only_crossrun_open,splits_match,features_ABC,sim_records_ABC,raw_models_ABC,quantile_models_12,tuning_predictions,selected_series_file,sim_params
+/home/claude/merged/frn_outputs/demo5000,5000,False,2026-09-23T01:17:29Z,False,1,"restart-and-run-all reproduces selected series, split IDs and simulator masks",True,True,True,True,True,12,True,True,True
+/home/claude/frn/frn_outputs/demo5000,5000,False,2026-09-20T16:49:19Z,True,0,none,False,True,True,True,True,12,True,True,True
+/home/claude/frn/frn_outputs/full50k,50000,True,2026-09-20T16:02:25Z,True,0,none,False,True,True,True,True,12,True,True,True

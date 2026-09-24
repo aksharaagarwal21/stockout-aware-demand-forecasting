@@ -1,0 +1,58 @@
+{
+  "min_pool_size": 200,
+  "pool_hierarchy": [
+    "category_x_sales_tier",
+    "category",
+    "management_group",
+    "global"
+  ],
+  "calibration_dates": [
+    "2024-06-11",
+    "2024-06-25"
+  ],
+  "calibration_rows_per_mechanism": {
+    "A": 42773,
+    "B": 42773,
+    "C": 42773
+  },
+  "quantile_models": [
+    "A:q25",
+    "A:q50",
+    "A:q75",
+    "A:q90",
+    "B:q25",
+    "B:q50",
+    "B:q75",
+    "B:q90",
+    "C:q25",
+    "C:q50",
+    "C:q75",
+    "C:q90"
+  ],
+  "point_models": [
+    "seasonal_naive",
+    "raw_l2",
+    "tft_direct",
+    "tft_recovered"
+  ],
+  "adaptive": {
+    "eta": 0.05,
+    "final_alpha": {
+      "A:0.25": 0.7480651832229147,
+      "A:0.5": 0.4957672826076495,
+      "A:0.75": 0.24667090965335947,
+      "A:0.9": 0.09767043416465335,
+      "B:0.25": 0.7475361491511008,
+      "B:0.5": 0.4958470816655723,
+      "B:0.75": 0.24588951350907123,
+      "B:0.9": 0.0973354700214429,
+      "C:0.25": 0.747675899379759,
+      "C:0.5": 0.4956341154721812,
+      "C:0.75": 0.2458075310186912,
+      "C:0.9": 0.09711607208600471
+    },
+    "alpha_star": 0.1,
+    "note": "drift sensitivity diagnostic; not a coverage guarantee under real endogenous stockouts"
+  },
+  "rearrangement": "per-row sort of the four corrected quantiles (monotone rearrangement)"
+}

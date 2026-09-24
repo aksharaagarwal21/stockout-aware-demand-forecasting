@@ -1,0 +1,4 @@
+mechanism,imported_rows,recomputed_rows_same_days,identical_keys,identical_feature_values,max_abs_feature_diff,identical_donor_proxy_labels
+A,340000,340000,True,True,0.0,True
+B,340000,340000,True,True,0.0,True
+C,340000,340000,True,True,0.0,True

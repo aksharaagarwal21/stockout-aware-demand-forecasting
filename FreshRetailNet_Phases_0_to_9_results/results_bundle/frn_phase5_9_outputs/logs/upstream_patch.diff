@@ -1,0 +1,72 @@
+8 +82,7 @@ def _imputation(CONFIG):
+     return imputation
+     
+ def _demand_recovery(imputation):
+-    dataset = load_dataset("Dingdong-Inc/FreshRetailNet-50K")
+-    data = dataset['train'].to_pandas()
++    data = _frn_local_train_df()
+     data = data.sort_values(by=['store_id', 'product_id', 'dt'])
+     horizon=90
+     series_num = data.shape[0]//horizon
+@@ -88,8 +106,7 @@ def demand_recovery(CONFIG):
+ 
+ 
+ def evaluation_mnar(X, imputation):
+-    dataset = load_dataset("Dingdong-Inc/FreshRetailNet-50K")
+-    data = dataset['train'].to_pandas()
++    data = _frn_local_train_df()
+     data = data.sort_values(by=['store_id', 'product_id', 'dt'])
+     horizon=90
+     series_num = data.shape[0]//horizon
+@@ -127,9 +144,9 @@ def evaluation_decoupling(data):
+ CONFIG = {
+     'model': 'DLinear',
+     'saving_path': './save',
+-    'EPOCHS': 5,
++    'EPOCHS': int(__import__('os').environ.get('FRN_UPSTREAM_EPOCHS', 5)),
+     'batch_size': 128,
+-    'patience': 5,
++    'patience': int(__import__('os').environ.get('FRN_UPSTREAM_PATIENCE', 5)),
+     'n_layers': 2,
+     'd_model': 64,
+     'd_ffn': 32,
+diff --git a/latent_demand_recovery/exp/data/generate_data.py b/latent_demand_recovery/exp/data/generate_data.py
+index fc56086..85b0606 100755
+--- a/latent_demand_recovery/exp/data/generate_data.py
++++ b/latent_demand_recovery/exp/data/generate_data.py
+@@ -3,6 +3,25 @@ import pandas as pd
+ import numpy as np
+ from datasets import load_dataset
+ 
++# ---- local-data shim injected by FreshRetailNet_Phases_5_to_9.ipynb (upstream smoke test) ----
++def _frn_local_train_df():
++    """Replacement for datasets.load_dataset(...)['train'].to_pandas(): reads the local parquet copy of the same
++    dataset (huggingface.co is blocked by this machine's egress policy) and optionally keeps only the first N
++    complete series so the upstream code path fits in available RAM/CPU."""
++    import os
++    import pyarrow.parquet as pq
++    path = os.environ["FRN_LOCAL_TRAIN"]
++    n = int(os.environ.get("FRN_UPSTREAM_MAX_SERIES", "0"))
++    if n <= 0:
++        return pq.read_table(path).to_pandas()
++    keys = pq.read_table(path, columns=["store_id", "product_id"]).to_pandas().drop_duplicates()
++    keys = keys.sort_values(["store_id", "product_id"]).head(n)
++    stores = sorted(set(keys.store_id.tolist()))
++    df = pq.read_table(path, filters=[("store_id", "in", stores)]).to_pandas()
++    return df.merge(keys, on=["store_id", "product_id"], how="inner")
++# ---- end shim ----
++
++
+ def mimic_missing(patch_ts, p=0.5, max_missing_patch=7, min_missing_patch=3):
+     patch_len = patch_ts.shape[-1]
+     patch_num = patch_ts.shape[1]
+@@ -48,8 +67,7 @@ def mimic_missing(patch_ts, p=0.5, max_missing_patch=7, min_missing_patch=3):
+         
+         
+ def load_data(CONFIG):
+-    dataset = load_dataset("Dingdong-Inc/FreshRetailNet-50K")
+-    data = dataset['train'].to_pandas()
++    data = _frn_local_train_df()
+ 
+     data = data.sort_values(by=['store_id', 'product_id', 'dt'])
+     horizon=90

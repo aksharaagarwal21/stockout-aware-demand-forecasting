@@ -1,0 +1,58 @@
+{
+  "run_started_utc": "2026-09-23T01:18:47Z",
+  "python": "3.11.15",
+  "packages": {
+    "numpy": "2.4.4",
+    "pandas": "2.3.3",
+    "pyarrow": "25.0.1",
+    "lightgbm": "4.7.0",
+    "scipy": "1.17.1",
+    "matplotlib": "3.10.9",
+    "psutil": "7.2.2",
+    "torch": "2.14.0+cu130",
+    "pytorch_forecasting": "1.8.0",
+    "lightning": "2.6.6",
+    "pypots": "not installed (ModuleNotFoundError)",
+    "lifelines": "0.30.3",
+    "einops": "0.8.2",
+    "nbclient": "0.11.0",
+    "ipykernel": "7.3.0",
+    "pygrinder": "0.7",
+    "h5py": "3.16.0",
+    "tsdb": "0.8",
+    "tensorboard": "2.21.0",
+    "datasets": "5.0.1"
+  },
+  "seed": 42,
+  "run_mode": "FAST",
+  "git_commit_of_working_dir": null,
+  "machine": {
+    "platform": "Linux-6.18.44-fc-v37-x86_64-with-glibc2.39",
+    "processor": "x86_64",
+    "logical_cpus": 2,
+    "ram_GB": 8.42,
+    "gpu": {
+      "cuda_available": false,
+      "device_count": 0,
+      "device_name": null,
+      "torch_threads": 2
+    }
+  },
+  "config": {
+    "SEED": 42,
+    "FAST_MODE": true,
+    "FULL_RUN": false,
+    "SAMPLE_SERIES": 5000,
+    "RUN_DEEP_BASELINE": true,
+    "RUN_ADAPTIVE_CALIBRATION": true,
+    "BOOTSTRAP_REPS": 200,
+    "MIN_POOL_SIZE": 200,
+    "MIN_KM_OBSERVATIONS": 200,
+    "MIN_KM_EXACT_EVENTS": 20,
+    "DEEP_SAMPLE_SERIES": 600,
+    "TIMESNET_EPOCHS": 4,
+    "TFT_EPOCHS": 4,
+    "UPSTREAM_SMOKE_SERIES": 120,
+    "UPSTREAM_SMOKE_EPOCHS": 2
+  }
+}

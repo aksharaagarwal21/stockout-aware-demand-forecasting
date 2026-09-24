@@ -1,0 +1,14 @@
+figure,provenance
+p5_timesnet_recovery.png,"FAST sample: 600 series, artificially hidden donor hours, fitting-period blocks only"
+p6_km_pools.png,FAST sample: simulated donor observations from fitting days only
+p7_calibration_diagnostics.png,"calibration data (2024-06-11..06-25, exact donors); coverage here is partly mechanical"
+p9_coverage_heatmap_tau50.png,"exact final donors (2024-06-26..07-02), frozen models"
+p9_coverage_heatmap_tau90.png,"exact final donors (2024-06-26..07-02), frozen models"
+p9_cost_heatmaps.png,"exact final donors, policy: demand-quantile LightGBM + pooled conformal"
+p9_transfer_gap_heatmap.png,"exact final donors, policy: demand-quantile LightGBM + pooled conformal"
+p9_fill_vs_leftover.png,"exact final donors, matched A→A / B→B / C→C cells"
+p9_date_by_date.png,"exact final donors, one point per final date"
+p9_subgroups.png,"exact final donors, matched cells, pooled-conformal quantiles"
+p9_real_definite_miss.png,"REAL recorded history, all final rows including genuinely censored ones; dashed line = 10% nominal miss rate"
+final_runtime_memory.png,"FAST mode on 2 logical CPUs, 8.42 GB RAM"
+final_phase_status.png,"FAST run, 5000 series"

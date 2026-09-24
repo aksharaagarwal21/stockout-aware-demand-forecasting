@@ -1,0 +1,26 @@
+stage,seconds,peak_rss_GB,ok
+provenance,78.53,1.123,True
+prereq: artifact hashes,1.11,1.143,True
+load 97-day panel (train + eval files),4.83,1.783,True
+re-derive A/B/C timelines on the 97-day panel,1.6,1.666,True
+rebuild past-only features for all 97 days,4.52,2.057,True
+audit: target-day perturbation test,3.12,2.347,True
+P5 clone official baseline repository,1.0,2.114,True
+"P5 upstream TimesNet smoke test (patched, local subsample)",299.37,2.163,True
+P5 upstream TFT environment + smoke test,47.57,2.163,True
+P5 TimesNet recovery — train on mechanism A,1971.49,3.187,True
+P5 TimesNet recovery — train on mechanism B,2405.93,3.136,True
+P5 TimesNet recovery — train on mechanism C,2207.68,3.16,True
+P5 recovered histories for all train x test mechanism pairs,1276.44,3.167,True
+"P5 TFT training (direct and TimesNet-recovered, per mechanism)",1044.01,2.807,True
+"P5 TFT predictions for every (trained mechanism, test history) pair",255.67,2.542,True
+P6 KM support-threshold selection on tuning dates,9.86,2.581,True
+P7 pooled conformal calibration of the 12 quantile models,38.41,2.703,True
+P7 residual quantiles for point models,3.75,2.855,True
+P8 development order check on tuning donors,67.53,3.099,True
+P9 sequential final-week prediction and ordering,627.48,5.064,True
+P9 paired cluster bootstrap,13.26,4.871,True
+P9 real-history definite-miss lower bound,31.78,4.45,True
+ablation 3: global-only calibration pooling,57.78,4.462,True
+ablation 9: two-day carry-over sensitivity,7.86,4.358,True
+ablation 10: oracle target-day weather (leakage sensitivity),8.24,4.49,True

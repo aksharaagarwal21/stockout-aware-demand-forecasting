@@ -1,0 +1,17 @@
+{
+  "strata": "first_category_id x sales_tier x stockout_tier",
+  "tier_statistic_period": "model_fit days 1-60",
+  "sales_tier_edges_mean_y16": [
+    0.4978333333333334,
+    0.7995
+  ],
+  "stockout_tier_edges_rate": [
+    0.16145833333333334,
+    0.21770833333333334
+  ],
+  "allocation": "proportional, largest remainder",
+  "within_stratum": "numpy default_rng(SEED).permutation of key-sorted series",
+  "seed": 20240628,
+  "n_selected": 5000,
+  "n_strata_nonempty": 241
+}

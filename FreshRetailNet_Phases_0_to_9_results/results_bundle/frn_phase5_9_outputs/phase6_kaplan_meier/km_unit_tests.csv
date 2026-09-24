@@ -1,0 +1,9 @@
+test,passed
+survival starts at or below 1 and is non-increasing,True
+"three exact events at 1,2,3 give S = 2/3, 1/3, 0",True
+"a censored observation stays in the risk set but is never an event: z=(1,2,3), e=(1,0,1) -> events only at 1 and 3, S = 2/3 then 0 (the censored 2 keeps the risk set at 3 for the first event)",True
+censoring after the last event leaves the curve above 0 (upper tail unidentified),True
+"requested percentiles are non-decreasing (0.25 -> 1, 0.50 -> 2, 0.90 -> 3)",True
+an unsupported upper percentile is flagged NOT_ESTIMABLE rather than extrapolated,True
+"hand example: D=(18,25,7), B=(20,12,9) -> Z=(18,12,7), E=(1,0,1)",True
+custom estimator agrees with lifelines 0.30.3 on a toy dataset (max diff 1.11e-16),True

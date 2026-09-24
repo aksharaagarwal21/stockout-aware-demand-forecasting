@@ -1,0 +1,33 @@
+{
+  "run_mode": "FAST",
+  "series evaluated": 5000,
+  "deep-model subsample": 600,
+  "exact final donor rows": 20641,
+  "real censored rows in the final week": 14359,
+  "calibration donor rows (per mechanism)": {
+    "A": 42773,
+    "B": 42773,
+    "C": 42773
+  },
+  "models used (frozen Phase 0-4)": 27,
+  "models trained in this notebook": 10,
+  "models blocked": [],
+  "upstream reproduction": "PARTIAL",
+  "prerequisite status": "IMPORTED_AND_VERIFIED",
+  "total runtime seconds": 10786.0,
+  "peak RSS GB": 5.064,
+  "final protocol lock sha256": "4ab12c4bddc06b4bb32ba8825353071b964ef5bfdd423bd4c876ac382180c1b6",
+  "phase gates": {
+    "Phase 5": "PASS",
+    "Phase 6": "PASS",
+    "Phase 7": "PASS",
+    "Phase 8": "PASS",
+    "Phase 9": "PASS",
+    "Prerequisite": "PASS"
+  },
+  "executed top to bottom in one kernel": true,
+  "bootstrap": {
+    "repetitions": 200,
+    "clusters": 866
+  }
+}

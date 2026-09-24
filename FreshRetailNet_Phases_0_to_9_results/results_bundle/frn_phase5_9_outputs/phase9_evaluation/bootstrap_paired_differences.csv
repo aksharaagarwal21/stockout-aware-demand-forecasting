@@ -1,0 +1,31 @@
+scenario,beta,comparison,point,lo,hi,clusters,n,dates
+excess stock more costly,0.25,pooled conformal vs uncalibrated (mean cost difference),-0.005174881737560977,-0.006838053303382374,-0.0034083952998650024,866,61923,7
+excess stock more costly,0.25,demand-quantile (conformal) vs raw-sales point+residual (mean cost difference),0.020783545260295022,0.0015575276477185532,0.043152076675460664,866,61923,7
+excess stock more costly,0.25,demand-quantile (conformal) vs seasonal naive (mean cost difference),-0.12133068435132532,-0.14653495100517577,-0.08755790289889993,866,61923,7
+excess stock more costly,0.25,demand-quantile (conformal) vs Kaplan-Meier (mean cost difference),-0.40429014284258635,-0.4276202983562381,-0.3824092270993921,866,61523,7
+excess stock more costly,0.25,transfer gap A->B (unseen minus matched mean cost),0.007418047554851648,0.005561647904049999,0.00899030585538583,866,20641,7
+excess stock more costly,0.25,transfer gap A->C (unseen minus matched mean cost),0.033544150461597755,0.028639039469205683,0.038675765984976095,866,20641,7
+excess stock more costly,0.25,transfer gap B->A (unseen minus matched mean cost),-0.003348778226038629,-0.0050099940481912655,-0.001495073919468148,866,20641,7
+excess stock more costly,0.25,transfer gap B->C (unseen minus matched mean cost),0.017362272147008584,0.01350320316106772,0.02152603622488743,866,20641,7
+excess stock more costly,0.25,transfer gap C->A (unseen minus matched mean cost),0.012386197603634463,0.007833258272754445,0.01661602467697165,866,20641,7
+excess stock more costly,0.25,transfer gap C->B (unseen minus matched mean cost),0.005607235913241859,0.001691141105786803,0.008795805031823586,866,20641,7
+equal costs,0.5,pooled conformal vs uncalibrated (mean cost difference),-0.007703426712234007,-0.009603259130971712,-0.006199028485134965,866,61923,7
+equal costs,0.5,demand-quantile (conformal) vs raw-sales point+residual (mean cost difference),-0.009114411391901056,-0.020401998648442443,0.005187009176712708,866,61923,7
+equal costs,0.5,demand-quantile (conformal) vs seasonal naive (mean cost difference),-0.0693828058853228,-0.08724584180425664,-0.04392002316468653,866,61923,7
+equal costs,0.5,demand-quantile (conformal) vs Kaplan-Meier (mean cost difference),-0.32231577209423096,-0.3429478560109243,-0.3045796162630063,866,58183,7
+equal costs,0.5,transfer gap A->B (unseen minus matched mean cost),0.005996866014412794,0.004760123849939556,0.007369931923186986,866,20641,7
+equal costs,0.5,transfer gap A->C (unseen minus matched mean cost),0.03037161707663194,0.025735808488298408,0.03499787385650753,866,20641,7
+equal costs,0.5,transfer gap B->A (unseen minus matched mean cost),-0.0027381079316329826,-0.004051884067469628,-0.001614525825457237,866,20641,7
+equal costs,0.5,transfer gap B->C (unseen minus matched mean cost),0.019299775910409267,0.015376551263273017,0.023114399401779805,866,20641,7
+equal costs,0.5,transfer gap C->A (unseen minus matched mean cost),-0.0011550532671975589,-0.005225007858814207,0.0026316668751940587,866,20641,7
+equal costs,0.5,transfer gap C->B (unseen minus matched mean cost),-0.004584247148429033,-0.007969586545366378,-0.0013692410123588342,866,20641,7
+shortage more costly,0.75,pooled conformal vs uncalibrated (mean cost difference),-0.04201927506053327,-0.04832036713074806,-0.036474088552821755,866,61923,7
+shortage more costly,0.75,demand-quantile (conformal) vs raw-sales point+residual (mean cost difference),-0.07896837274997293,-0.09459560720212969,-0.06150228901337823,866,61923,7
+shortage more costly,0.75,demand-quantile (conformal) vs seasonal naive (mean cost difference),-0.1376414654175666,-0.17226612773795352,-0.09023630569342991,866,61923,7
+shortage more costly,0.75,demand-quantile (conformal) vs Kaplan-Meier (mean cost difference),-0.7474938048425612,-0.8175140858256466,-0.6812472715801352,866,47294,7
+shortage more costly,0.75,transfer gap A->B (unseen minus matched mean cost),0.010110714861900294,0.0076265504785664184,0.012835953739247119,866,20641,7
+shortage more costly,0.75,transfer gap A->C (unseen minus matched mean cost),0.047246328065269516,0.039116825039885665,0.05544088147094075,866,20641,7
+shortage more costly,0.75,transfer gap B->A (unseen minus matched mean cost),-0.003190199857759368,-0.005948437857219729,-0.0005812927161646244,866,20641,7
+shortage more costly,0.75,transfer gap B->C (unseen minus matched mean cost),0.0365312766875906,0.02752283636463185,0.0447123840294799,866,20641,7
+shortage more costly,0.75,transfer gap C->A (unseen minus matched mean cost),-0.01276338063326643,-0.021917461519332243,-0.00497853565563851,866,20641,7
+shortage more costly,0.75,transfer gap C->B (unseen minus matched mean cost),-0.01616336212524483,-0.024232220492793492,-0.008286462328639376,866,20641,7

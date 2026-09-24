@@ -1,0 +1,44 @@
+{
+  "global_audit": {
+    "rows": 4500000,
+    "nulls": {
+      "city_id": 0,
+      "store_id": 0,
+      "product_id": 0,
+      "dt": 0,
+      "sale_amount": 0,
+      "hours_sale": 0,
+      "stock_hour6_22_cnt": 0,
+      "hours_stock_status": 0
+    },
+    "bad_len_sale": 0,
+    "bad_len_stock": 0,
+    "neg_hourly": 0,
+    "neg_sale_amount": 0,
+    "recon_maxdiff": 7.105427357601002e-15,
+    "identity_mismatch": 0,
+    "out_of_range_dates": 0,
+    "stock_values": [
+      0,
+      1
+    ],
+    "flagged_hours": 14311536,
+    "flagged_hours_with_sales": 417269,
+    "full_outage_days": 181791,
+    "full_outage_days_with_sales": 22299,
+    "max_hourly": 16.9,
+    "duplicate_keys": 0,
+    "missing_keys": 0
+  },
+  "sample_audit": {
+    "rows": 450000,
+    "nulls": 0,
+    "bad_len": 0,
+    "neg": 0,
+    "recon_maxdiff": 7.105427357601002e-15,
+    "identity_mismatch": 0,
+    "duplicates": 0,
+    "missing": 0
+  },
+  "reconciliation_tolerance": 1e-05
+}

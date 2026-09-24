@@ -1,0 +1,41 @@
+{
+  "run_started_utc": "2026-09-23T00:52:45Z",
+  "config": {
+    "RUN_TAG": "demo5000",
+    "SEED": 20240628,
+    "FAST_MODE": false,
+    "SAMPLE_N_SERIES": 5000,
+    "SMOKE_N_SERIES": 10,
+    "FULL_RUN": false,
+    "N_THREADS": 2
+  },
+  "python": "3.11.15",
+  "packages": {
+    "numpy": "2.4.4",
+    "pandas": "2.3.3",
+    "pyarrow": "25.0.1",
+    "lightgbm": "4.7.0",
+    "matplotlib": "3.10.9",
+    "scipy": "1.17.1",
+    "duckdb": "1.5.5",
+    "psutil": "7.2.2",
+    "ipykernel": "7.3.0",
+    "nbclient": "0.11.0"
+  },
+  "machine": {
+    "platform": "Linux-6.18.44-fc-v37-x86_64-with-glibc2.39",
+    "processor": "x86_64",
+    "logical_cpus": 2,
+    "ram_GB": 8.42
+  },
+  "source_files": {
+    "train.parquet": {
+      "sha256": "6706832db892bbae4969c19d87e07975d2543d2ba7d7d4756360654785de5a3d",
+      "bytes": 106436287
+    },
+    "eval.parquet": {
+      "sha256": "1b118840664280c6b88bffc84c80ee1f54c05d911e354b7599e5da10995e960e",
+      "bytes": 8440124
+    }
+  }
+}

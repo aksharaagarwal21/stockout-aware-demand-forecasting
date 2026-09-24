@@ -1,0 +1,11 @@
+Check,Expected,Observed,Status,Critical
+"1. hourly arrays have 24 entries (train + eval, selected series)",0 malformed,"0 malformed in 485,000 rows",PASS,True
+2. stock_hour6_22_cnt == sum(hours_stock_status[6:22]),0 mismatches,0 mismatches,PASS,True
+"3. primary target is sum(hours_sale[6:22]), not the 24-hour sale_amount",target == 16h sum and differs from sale_amount,16h/24h total ratio = 0.9516,PASS,True
+4. no target-day sales / stock flags / weather / promotion enter the features,features for day t unchanged when every day-t field is randomised,unchanged on all histories: True; next-day rows that do change: 1.00,PASS,True
+5. rolling and lag features are shifted by at least one day,"y_lag1(t)=visible(t-1), y_roll7(t)=mean(visible[t-7..t-1])","lag1 match=True, roll7 match=True",PASS,True
+6. A/B/C feature tables share target keys but differ in history,"identical (sid, day) keys; >5% of rows differ","identical keys=True; rows differing: {'AvsB': 0.728, 'AvsC': 1.0, 'BvsC': 1.0}",PASS,True
+7. quantile models use exact donor proxy labels only,"labels only on complete donor days, equal to the recomputed 16h sum",manifest flag=True; every scored row is a real donor=True; labels match recomputation=True,PASS,True
+8. models and predictions belong to the expected mechanism and split,12 quantile objectives with the right alpha; tuning predictions on days 61-75,"quantile objective+alpha correct: 12/12 (e.g. A:q25 -> ('quantile', '0.25')); raw-sales objective=regression: True; tuning day range ok: True",PASS,True
+9. calibration dates (76-90) were not used for fitting or tuning,"train <= day 60, tuning <= day 75","train_max_day=[60, 60, 60], tuning_max_day=[75, 75, 75]",PASS,True
+10. final-evaluation outcomes have not been used yet,no Phase 0-4 artifact holds a day index >= 90 (2024-06-26),"max day index per artifact: {'sim_records': 89, 'feature_tables': 74, 'tuning_predictions': 74}; eval inspection keys: ['dates', 'n_series', 'note', 'rows', 'rows_per_date']",PASS,True

@@ -1,0 +1,5 @@
+threshold,high-stockout-tier series,all selected series,share of high tier
+<=5 fit donors,61,61,0.036
+<=10 fit donors,153,153,0.091
+0 tuning donors,36,37,0.021
+<=2 calibration donors,152,226,0.09

@@ -1,0 +1,489 @@
+{
+  "gates": {
+    "Phase 0": [
+      {
+        "phase": "Phase 0",
+        "check": "schema has all expected fields (train & eval)",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "phase": "Phase 0",
+        "check": "train rows == 4,500,000",
+        "status": "PASS",
+        "detail": "4500000"
+      },
+      {
+        "phase": "Phase 0",
+        "check": "eval rows == 350,000",
+        "status": "PASS",
+        "detail": "350000"
+      },
+      {
+        "phase": "Phase 0",
+        "check": "eval dates are 2024-06-26..2024-07-02",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "phase": "Phase 0",
+        "check": "static category IDs constant within each series",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "phase": "Phase 0",
+        "check": "50,000 series x 90 dates, no duplicate or missing keys",
+        "status": "PASS",
+        "detail": "series=50000, dup=0, missing=0"
+      },
+      {
+        "phase": "Phase 0",
+        "check": "series selection deterministic within session",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "phase": "Phase 0",
+        "check": "selected series count == 5000",
+        "status": "PASS",
+        "detail": "5000"
+      },
+      {
+        "phase": "Phase 0",
+        "check": "tier composition of sample within 1 pp of population",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "phase": "Phase 0",
+        "check": "hand example [2,3,4,1] with stock 6 -> [2,3,1,0], total 6, proxy 10",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "phase": "Phase 0",
+        "check": "smoke: 10 series load with 900 unique rows",
+        "status": "PASS",
+        "detail": "900"
+      },
+      {
+        "phase": "Phase 0",
+        "check": "smoke: simulated sales <= donor demand",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "phase": "Phase 0",
+        "check": "smoke: feature table shape and categorical IDs",
+        "status": "PASS",
+        "detail": "(680, 48)"
+      },
+      {
+        "phase": "Phase 0",
+        "check": "smoke: target-day perturbation leaves target-day features unchanged",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "phase": "Phase 0",
+        "check": "restart-and-run-all reproduces selected series, split IDs and simulator masks",
+        "status": "FAIL",
+        "detail": "NOT YET VERIFIED: first execution in this output folder"
+      }
+    ],
+    "Phase 1": [
+      {
+        "phase": "Phase 1",
+        "check": "no duplicate (series, dt) keys [global and sample]",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "phase": "Phase 1",
+        "check": "no nulls [global and sample]",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "phase": "Phase 1",
+        "check": "sales nonnegative [global and sample]",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "phase": "Phase 1",
+        "check": "all hourly arrays have 24 positions",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "phase": "Phase 1",
+        "check": "|sum(hours_sale) - sale_amount| <= 1e-05",
+        "status": "PASS",
+        "detail": "max diff 7.11e-15"
+      },
+      {
+        "phase": "Phase 1",
+        "check": "stock_hour6_22_cnt == sum(hours_stock_status[6:22])",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "phase": "Phase 1",
+        "check": "stock status values are binary {0,1}",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "phase": "Phase 1",
+        "check": "every feature's latest source date < target date",
+        "status": "PASS",
+        "detail": "46 features"
+      },
+      {
+        "phase": "Phase 1",
+        "check": "no forbidden target-day field used as a feature",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "phase": "Phase 1",
+        "check": "ID columns are categorical inputs",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "phase": "Phase 1",
+        "check": "perturbing ALL target-day fields leaves target-day features unchanged (real, A, B, C)",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "phase": "Phase 1",
+        "check": "power check: next-day features do change",
+        "status": "PASS",
+        "detail": "[1.0, 1.0, 1.0, 1.0]"
+      },
+      {
+        "phase": "Phase 1",
+        "check": "manual history check: y_lag1/y_lag7/so_lag1 match recorded t-1/t-7 values",
+        "status": "PASS",
+        "detail": ""
+      }
+    ],
+    "Phase 2": [
+      {
+        "phase": "Phase 2",
+        "check": "A: visible hourly sales <= donor hourly demand",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "phase": "Phase 2",
+        "check": "A: visible daily sales <= opening stock (+ single refill for A/B)",
+        "status": "PASS",
+        "detail": "float32 storage tolerance 1e-5 relative"
+      },
+      {
+        "phase": "Phase 2",
+        "check": "A: unmasked donor days keep visible == demand",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "phase": "Phase 2",
+        "check": "A: masks and stock reproduce with the seed",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "phase": "Phase 2",
+        "check": "A: genuinely censored / non-eligible days left as recorded",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "phase": "Phase 2",
+        "check": "B: visible hourly sales <= donor hourly demand",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "phase": "Phase 2",
+        "check": "B: visible daily sales <= opening stock (+ single refill for A/B)",
+        "status": "PASS",
+        "detail": "float32 storage tolerance 1e-5 relative"
+      },
+      {
+        "phase": "Phase 2",
+        "check": "B: unmasked donor days keep visible == demand",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "phase": "Phase 2",
+        "check": "B: masks and stock reproduce with the seed",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "phase": "Phase 2",
+        "check": "B: genuinely censored / non-eligible days left as recorded",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "phase": "Phase 2",
+        "check": "C: visible hourly sales <= donor hourly demand",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "phase": "Phase 2",
+        "check": "C: visible daily sales <= opening stock (+ single refill for A/B)",
+        "status": "PASS",
+        "detail": "float32 storage tolerance 1e-5 relative"
+      },
+      {
+        "phase": "Phase 2",
+        "check": "C: unmasked donor days keep visible == demand",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "phase": "Phase 2",
+        "check": "C: masks and stock reproduce with the seed",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "phase": "Phase 2",
+        "check": "C: genuinely censored / non-eligible days left as recorded",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "phase": "Phase 2",
+        "check": "identical eligible donor IDs across A/B/C",
+        "status": "PASS",
+        "detail": "248739"
+      },
+      {
+        "phase": "Phase 2",
+        "check": "identical donor proxy demand across A/B/C",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "phase": "Phase 2",
+        "check": "hand example passes",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "phase": "Phase 2",
+        "check": "same tuning target donor IDs and proxy labels across A/B/C feature tables",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "phase": "Phase 2",
+        "check": ">=5% of tuning target rows have different y_roll7 for every A/B/C pair",
+        "status": "PASS",
+        "detail": "[0.412, 0.978, 0.978]"
+      },
+      {
+        "phase": "Phase 2",
+        "check": "simulated timelines differ from the real recorded timeline",
+        "status": "PASS",
+        "detail": ""
+      }
+    ],
+    "Phase 3": [
+      {
+        "phase": "Phase 3",
+        "check": "worked example: proxy 18, stock 12 -> raw label 12",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "phase": "Phase 3",
+        "check": "raw training label on masked donors == simulated visible total (A/B/C)",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "phase": "Phase 3",
+        "check": "model files, parameters, predictions and row counts saved for A/B/C",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "phase": "Phase 3",
+        "check": "every prediction uses features whose latest source date < target date",
+        "status": "PASS",
+        "detail": "features are built only by build_features (Phase 1 provenance + perturbation gates)"
+      },
+      {
+        "phase": "Phase 3",
+        "check": "training rows are fit dates only (days 8-60)",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "phase": "Phase 3",
+        "check": "scrambling every target-day field changes no raw-model prediction",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "phase": "Phase 3",
+        "check": "raw LightGBM beats seasonal naive on tuning donors (visible-sales WAPE) for A/B/C",
+        "status": "PASS",
+        "detail": ""
+      }
+    ],
+    "Phase 4": [
+      {
+        "phase": "Phase 4",
+        "check": "12 demand quantile model files saved",
+        "status": "PASS",
+        "detail": "12"
+      },
+      {
+        "phase": "Phase 4",
+        "check": "tuning predictions, chosen settings and donor counts saved",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "phase": "Phase 4",
+        "check": "training/tuning labels only on real complete donor days (no partly stocked real day labelled)",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "phase": "Phase 4",
+        "check": "predictions nonnegative and monotone after rearrangement",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "phase": "Phase 4",
+        "check": "identical tuning donor IDs across A/B/C and with Phase 3",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "phase": "Phase 4",
+        "check": "weights use days <= 60, selection uses days 61-75, no calibration day used",
+        "status": "PASS",
+        "detail": "{'A': (60, 61, 75), 'B': (60, 61, 75), 'C': (60, 61, 75)}"
+      }
+    ]
+  },
+  "stages": [
+    {
+      "stage": "P0 provenance + hashes",
+      "seconds": 0.61,
+      "peak_rss_GB": 0.287,
+      "ok": true
+    },
+    {
+      "stage": "P0 schema inspection",
+      "seconds": 0.33,
+      "peak_rss_GB": 0.411,
+      "ok": true
+    },
+    {
+      "stage": "P0 global streaming audit",
+      "seconds": 9.66,
+      "peak_rss_GB": 1.114,
+      "ok": true
+    },
+    {
+      "stage": "P0 series selection",
+      "seconds": 1.48,
+      "peak_rss_GB": 0.882,
+      "ok": true
+    },
+    {
+      "stage": "P0 smoke check (10 series)",
+      "seconds": 3.62,
+      "peak_rss_GB": 1.233,
+      "ok": true
+    },
+    {
+      "stage": "P1 load selected panel",
+      "seconds": 4.52,
+      "peak_rss_GB": 1.28,
+      "ok": true
+    },
+    {
+      "stage": "P1 daily table",
+      "seconds": 0.31,
+      "peak_rss_GB": 0.921,
+      "ok": true
+    },
+    {
+      "stage": "P1 real-timeline features",
+      "seconds": 1.0,
+      "peak_rss_GB": 0.979,
+      "ok": true
+    },
+    {
+      "stage": "P1 leakage perturbation test",
+      "seconds": 4.05,
+      "peak_rss_GB": 1.097,
+      "ok": true
+    },
+    {
+      "stage": "P2 simulator fit (fit dates) + tuning check",
+      "seconds": 7.62,
+      "peak_rss_GB": 0.813,
+      "ok": true
+    },
+    {
+      "stage": "P2 simulate A/B/C timelines + rebuild features per timeline",
+      "seconds": 8.09,
+      "peak_rss_GB": 0.985,
+      "ok": true
+    },
+    {
+      "stage": "P3 baselines A/B/C",
+      "seconds": 431.35,
+      "peak_rss_GB": 1.252,
+      "ok": true
+    },
+    {
+      "stage": "P3 prediction perturbation test",
+      "seconds": 3.31,
+      "peak_rss_GB": 1.137,
+      "ok": true
+    },
+    {
+      "stage": "P4 demand quantile models A/B/C x 4 taus",
+      "seconds": 999.48,
+      "peak_rss_GB": 1.195,
+      "ok": true
+    }
+  ],
+  "phase_status": {
+    "Phase 0": "FAIL",
+    "Phase 1": "PASS",
+    "Phase 2": "PASS",
+    "Phase 3": "PASS",
+    "Phase 4": "PASS"
+  },
+  "failed_checks": [
+    {
+      "phase": "Phase 0",
+      "check": "restart-and-run-all reproduces selected series, split IDs and simulator masks",
+      "detail": "NOT YET VERIFIED: first execution in this output folder"
+    }
+  ],
+  "run_dir": "/home/claude/merged/frn_outputs/demo5000",
+  "n_series": 5000,
+  "only_crossrun_open": true
+}

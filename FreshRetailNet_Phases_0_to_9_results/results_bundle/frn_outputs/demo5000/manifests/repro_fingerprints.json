@@ -1,0 +1,22 @@
+[
+  {
+    "time_utc": "2026-09-23T00:53:33Z",
+    "fingerprints": {
+      "selected_series_sha256": "e6b44ed046aafbc98ce76f43d802e9f28f7238856579ee71a55999c75dbe4cfe",
+      "split_manifest_sha256": "1510eb5d6d3ae0b8c98bc5323636c335f3f85bc6e64b6d9d8b4369826549ff06",
+      "sim_mask_A_sha256": "cd5d1e3b8b0786a2456c38709e6411ed9623535d82d2cdc974485cbc134108b7",
+      "sim_mask_B_sha256": "8ce929c5d803baaa488f8aa94c93e17196e1c5b4a6eee5b56750a49556f8ec70",
+      "sim_mask_C_sha256": "3d854812bc4d9db7bc23e1b10dd08727ef8cbcee1f0a677ace3fa7171abd6e43",
+      "source_sha256": {
+        "train.parquet": "6706832db892bbae4969c19d87e07975d2543d2ba7d7d4756360654785de5a3d",
+        "eval.parquet": "1b118840664280c6b88bffc84c80ee1f54c05d911e354b7599e5da10995e960e"
+      },
+      "config": {
+        "SEED": 20240628,
+        "RUN_TAG": "demo5000",
+        "SAMPLE_N_SERIES": 5000,
+        "FULL_RUN": false
+      }
+    }
+  }
+]

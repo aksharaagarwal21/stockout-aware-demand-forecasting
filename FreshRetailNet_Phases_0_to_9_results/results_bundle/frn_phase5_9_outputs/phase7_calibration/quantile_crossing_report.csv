@@ -1,0 +1,4 @@
+stage,rows with any crossing
+"before calibration (Phase 0-4 output, already rearranged there)",0.05727912468145793
+after raw conformal correction,0.02032434791418262
+after monotone rearrangement,0.0

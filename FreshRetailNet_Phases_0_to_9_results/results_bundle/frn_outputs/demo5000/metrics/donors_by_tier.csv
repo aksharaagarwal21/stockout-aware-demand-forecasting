@@ -1,0 +1,10 @@
+stockout_tier,sales_tier,n_series,donors_calibration,donors_model_fit,donors_tuning,share_calibration,share_model_fit,share_tuning
+high,high,598,4722,13039,4830,0.526,0.363,0.538
+high,low,575,4746,14751,4800,0.55,0.428,0.557
+high,mid,508,4097,12598,4278,0.538,0.413,0.561
+low,high,527,4276,20759,4901,0.541,0.657,0.62
+low,low,523,4650,21442,4849,0.593,0.683,0.618
+low,mid,584,5109,24117,5555,0.583,0.688,0.634
+mid,high,542,4680,17345,5052,0.576,0.533,0.621
+mid,low,567,5226,19538,5254,0.614,0.574,0.618
+mid,mid,576,5267,19661,5578,0.61,0.569,0.646

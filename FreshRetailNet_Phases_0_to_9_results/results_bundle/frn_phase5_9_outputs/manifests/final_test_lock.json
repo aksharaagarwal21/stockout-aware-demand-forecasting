@@ -1,0 +1,542 @@
+{
+  "locked_utc": "2026-09-23T04:04:38Z",
+  "run_mode": "FAST",
+  "seed": 42,
+  "n_series": 5000,
+  "deep_subsample": 600,
+  "dataset_sha256": {
+    "train.parquet": {
+      "sha256": "6706832db892bbae4969c19d87e07975d2543d2ba7d7d4756360654785de5a3d",
+      "bytes": 106436287
+    },
+    "eval.parquet": {
+      "sha256": "1b118840664280c6b88bffc84c80ee1f54c05d911e354b7599e5da10995e960e",
+      "bytes": 8440124
+    }
+  },
+  "phase04_run": "/home/claude/merged/frn_outputs/demo5000",
+  "phase04_artifact_sha256": {
+    "data/features_A.parquet": {
+      "sha256": "0f66d9260f8e1eba404231157060e917e0ae530ab1d7f73c4bc61465be1a6bcd",
+      "bytes": 21088902
+    },
+    "data/features_B.parquet": {
+      "sha256": "916932c517c48aabd7e20982af38b05fb262cc48c52b5df82aaf6ed8fde2a938",
+      "bytes": 21689394
+    },
+    "data/features_C.parquet": {
+      "sha256": "bc6ab2eb4a902042553799b34832f8d086b2f3b6c3f73d02285bfa55e9def835",
+      "bytes": 22715221
+    },
+    "sim/sim_records_A.parquet": {
+      "sha256": "f5b52d476ba13795ee18b0121cf703c62e6b4fbbb59642d1c0c13a73a6a15f69",
+      "bytes": 7097171
+    },
+    "sim/sim_records_B.parquet": {
+      "sha256": "b9b17d8a1d791ef95f5a88c4d4ef2285bd9a49743f194faef496c8b78ba68ce4",
+      "bytes": 7367017
+    },
+    "sim/sim_records_C.parquet": {
+      "sha256": "c645d0d0529dd26e1c229550ad5fdbc2084eabbb14de2409d29437ca173f6104",
+      "bytes": 7632161
+    },
+    "models/phase3_raw_l2_A.txt": {
+      "sha256": "26f54354a86f411efed0afa149ccaf5a2b39adfaaf37043929dab97282698cfd",
+      "bytes": 1375258
+    },
+    "models/phase3_raw_l2_B.txt": {
+      "sha256": "cfecd860f6ddf23cd3dfba7d562496908df49fe9adbfb6956ad1af002c0e32a1",
+      "bytes": 1184873
+    },
+    "models/phase3_raw_l2_C.txt": {
+      "sha256": "e33c50630db2c93beeb6e00939312158b6ea0302380803cd39734fea78345246",
+      "bytes": 725230
+    },
+    "models/phase4_demand_q25_A.txt": {
+      "sha256": "812b94c4974771722405ab3daffa786b0989d92545c56b8522eecf2dbdb3afbf",
+      "bytes": 889622
+    },
+    "models/phase4_demand_q50_A.txt": {
+      "sha256": "234407530b82f68b717f733472dd6232830b2ca89fd443e86ef5c74865ee09be",
+      "bytes": 2159834
+    },
+    "models/phase4_demand_q75_A.txt": {
+      "sha256": "c092e6a8ef73dd8a1bc53bd05c67486b1c4158f61b8b9860be9b1c6ea00c0108",
+      "bytes": 13006666
+    },
+    "models/phase4_demand_q90_A.txt": {
+      "sha256": "eace5c7f2d027b145406e52ed33d211a8f3c9931df083e77f7d0fd89671b8057",
+      "bytes": 2336460
+    },
+    "models/phase4_demand_q25_B.txt": {
+      "sha256": "e447e34954d15fe4fd327234624a6e459d80487c318ec2c794be207509433c8f",
+      "bytes": 1809262
+    },
+    "models/phase4_demand_q50_B.txt": {
+      "sha256": "789c4f162b566a221b61a2add2663c5fe270411c4eea281de953e195d985e05d",
+      "bytes": 2083966
+    },
+    "models/phase4_demand_q75_B.txt": {
+      "sha256": "46b79684d9b32cb250c02c93742f33d9817245cb8070eb50e83daed066e0bcc3",
+      "bytes": 11501569
+    },
+    "models/phase4_demand_q90_B.txt": {
+      "sha256": "f3e05ce093f277d333ce1187de0943a73a59c2c5e9666a4df30044993d6d5ca4",
+      "bytes": 4267138
+    },
+    "models/phase4_demand_q25_C.txt": {
+      "sha256": "d796444601cdbf2abd556b8b5e9db60d5e53f0cc17ec4fc45a0193ce090ac791",
+      "bytes": 1817747
+    },
+    "models/phase4_demand_q50_C.txt": {
+      "sha256": "0aa4431dfdc417bc79197180d725760ec81d8200f7e7b5f74ec5c14b711d5bdf",
+      "bytes": 24554823
+    },
+    "models/phase4_demand_q75_C.txt": {
+      "sha256": "8e3e57c482916a290275d65783d0a93dda92bdf24e7a1df7330d47aefaecc943",
+      "bytes": 12958510
+    },
+    "models/phase4_demand_q90_C.txt": {
+      "sha256": "ccd4cc73c699ec5f5f67d58d2002a538075775f7b52aa593488aa6e899715d6d",
+      "bytes": 4829686
+    },
+    "predictions/phase4_tuning_predictions_A.parquet": {
+      "sha256": "fa3f68dd09cbdd5ba7aabae7e57d27401678795e9fe626004739c7fb07140377",
+      "bytes": 3748738
+    },
+    "predictions/phase4_tuning_predictions_B.parquet": {
+      "sha256": "f53321a83f60d7d351c04a15d32f792556ccc98d9ebd23d561b79974bd5c1f45",
+      "bytes": 3748722
+    },
+    "predictions/phase4_tuning_predictions_C.parquet": {
+      "sha256": "e7d79d567e4fbf8622e55be38e83a5a854aeb8b10fff6e9a1ceb936a8685fbe6",
+      "bytes": 3749330
+    },
+    "predictions/phase3_predictions_A.parquet": {
+      "sha256": "24aeb808fc5310180e295ebe45b7e0bc7a825fecc3e676f9824ec5990e73b713",
+      "bytes": 17490567
+    },
+    "predictions/phase3_predictions_B.parquet": {
+      "sha256": "17a01f27e8304094ab69bb783375943ddac49f85f1bfc1cb3c4e10b154b33109",
+      "bytes": 17736678
+    },
+    "predictions/phase3_predictions_C.parquet": {
+      "sha256": "a4e7b0745493e25350f98363aef81b629a896d6b03087a0fb81d4d9cfae142e6",
+      "bytes": 18272276
+    },
+    "manifests/selected_series.parquet": {
+      "sha256": "3edf9b145695e5e8d48e3e7da6ff3a8c17f2817920b4de870cb179a86ce78da4",
+      "bytes": 155796
+    },
+    "manifests/split_manifest.csv": {
+      "sha256": "0e3cb040a4d9ff9b3250b87317325e6a148f69c586ff788588e33e87c69120f8",
+      "bytes": 495
+    },
+    "sim/simulator_params.json": {
+      "sha256": "7faa948994f861d62e8829f70e65d68348b1cb445649d5bbaabeb1ef7eeaccda",
+      "bytes": 652
+    },
+    "models/phase4_model_info.json": {
+      "sha256": "9248f7504fb8446bd3e65ebe7f009c217bcdeafbc0197612c061db1a5ccd2bcc",
+      "bytes": 10094
+    },
+    "models/phase3_model_info.json": {
+      "sha256": "aada6db78b491fd807101f8295eb4216d83829e2db851c4e6ecc969511ebfc29",
+      "bytes": 4212
+    },
+    "manifests/provenance.json": {
+      "sha256": "973c03c1cafaaadaa85769105e8d7b93b3f3fd1877fc2d62f4ebe69eb1c05052",
+      "bytes": 973
+    }
+  },
+  "simulator_params": {
+    "p_refill": 0.1474,
+    "refill_frac": 0.5,
+    "promo_factor": 0.6,
+    "q_floor": 0.1,
+    "k": 1.0,
+    "sigma": 0.25,
+    "k_C": 0.5,
+    "sigma_C": 0.25
+  },
+  "simulator_seed": 20240628,
+  "calibration_table_sha256": "dc070b4bbba9f8b841d32f6fbf34fc3c8ee2d28aaaf890424ef8e2c5416fdc37",
+  "calibration_manifest": {
+    "min_pool_size": 200,
+    "pool_hierarchy": [
+      "category_x_sales_tier",
+      "category",
+      "management_group",
+      "global"
+    ],
+    "calibration_dates": [
+      "2024-06-11",
+      "2024-06-25"
+    ],
+    "calibration_rows_per_mechanism": {
+      "A": 42773,
+      "B": 42773,
+      "C": 42773
+    },
+    "quantile_models": [
+      "A:q25",
+      "A:q50",
+      "A:q75",
+      "A:q90",
+      "B:q25",
+      "B:q50",
+      "B:q75",
+      "B:q90",
+      "C:q25",
+      "C:q50",
+      "C:q75",
+      "C:q90"
+    ],
+    "point_models": [
+      "seasonal_naive",
+      "raw_l2",
+      "tft_direct",
+      "tft_recovered"
+    ],
+    "adaptive": {
+      "eta": 0.05,
+      "final_alpha": {
+        "A:0.25": 0.7480651832229147,
+        "A:0.5": 0.4957672826076495,
+        "A:0.75": 0.24667090965335947,
+        "A:0.9": 0.09767043416465335,
+        "B:0.25": 0.7475361491511008,
+        "B:0.5": 0.4958470816655723,
+        "B:0.75": 0.24588951350907123,
+        "B:0.9": 0.0973354700214429,
+        "C:0.25": 0.747675899379759,
+        "C:0.5": 0.4956341154721812,
+        "C:0.75": 0.2458075310186912,
+        "C:0.9": 0.09711607208600471
+      },
+      "alpha_star": 0.1,
+      "note": "drift sensitivity diagnostic; not a coverage guarantee under real endogenous stockouts"
+    },
+    "rearrangement": "per-row sort of the four corrected quantiles (monotone rearrangement)"
+  },
+  "km_policy_manifest": {
+    "min_obs": 200,
+    "min_events": 20,
+    "hierarchy": [
+      "category_x_sales_tier",
+      "category",
+      "management_group",
+      "global"
+    ],
+    "selection": "support threshold chosen by mean newsvendor cost on exact tuning donors; hierarchy predeclared",
+    "pools_used": {
+      "A": {
+        "category_x_sales_tier:22|mid": 13,
+        "category_x_sales_tier:20|high": 256,
+        "category_x_sales_tier:8|mid": 124,
+        "category_x_sales_tier:5|low": 65,
+        "category_x_sales_tier:8|high": 64,
+        "category_x_sales_tier:21|low": 117,
+        "category_x_sales_tier:20|low": 145,
+        "category_x_sales_tier:22|high": 16,
+        "category:22": 4,
+        "category_x_sales_tier:24|high": 27,
+        "category_x_sales_tier:25|low": 10,
+        "category_x_sales_tier:25|high": 15,
+        "category_x_sales_tier:18|low": 141,
+        "category_x_sales_tier:30|low": 31,
+        "category_x_sales_tier:31|high": 38,
+        "category:30": 7,
+        "category_x_sales_tier:18|mid": 76,
+        "category:3": 2,
+        "category_x_sales_tier:10|low": 97,
+        "category_x_sales_tier:28|high": 87,
+        "category_x_sales_tier:24|low": 65,
+        "category_x_sales_tier:20|mid": 153,
+        "category_x_sales_tier:24|mid": 47,
+        "management_group:0": 2,
+        "category_x_sales_tier:7|mid": 42,
+        "category_x_sales_tier:10|mid": 109,
+        "category:27": 4,
+        "category:7": 5,
+        "category_x_sales_tier:16|low": 228,
+        "category_x_sales_tier:14|low": 17,
+        "category_x_sales_tier:4|high": 499,
+        "category_x_sales_tier:5|mid": 56,
+        "management_group:4": 3,
+        "category_x_sales_tier:4|low": 263,
+        "category_x_sales_tier:30|mid": 28,
+        "category_x_sales_tier:0|mid": 10,
+        "category_x_sales_tier:31|mid": 75,
+        "category_x_sales_tier:21|high": 77,
+        "category_x_sales_tier:29|high": 228,
+        "category_x_sales_tier:10|high": 78,
+        "category_x_sales_tier:11|high": 18,
+        "category_x_sales_tier:11|mid": 12,
+        "category_x_sales_tier:4|mid": 326,
+        "category:23": 2,
+        "category_x_sales_tier:25|mid": 18,
+        "category_x_sales_tier:8|low": 101,
+        "category:15": 2,
+        "category_x_sales_tier:15|mid": 17,
+        "category_x_sales_tier:11|low": 21,
+        "category_x_sales_tier:16|mid": 312,
+        "category_x_sales_tier:7|low": 53,
+        "category_x_sales_tier:23|low": 17,
+        "category_x_sales_tier:29|mid": 68,
+        "category_x_sales_tier:21|mid": 85,
+        "category_x_sales_tier:27|low": 19,
+        "category_x_sales_tier:16|high": 168,
+        "category_x_sales_tier:18|high": 19,
+        "category_x_sales_tier:23|mid": 12,
+        "category_x_sales_tier:28|low": 46,
+        "category_x_sales_tier:28|mid": 64,
+        "category_x_sales_tier:31|low": 77,
+        "category:0": 2,
+        "category:14": 3,
+        "management_group:3": 13,
+        "category_x_sales_tier:3|low": 7,
+        "category_x_sales_tier:29|low": 53,
+        "category_x_sales_tier:5|high": 45,
+        "category_x_sales_tier:15|low": 49,
+        "category_x_sales_tier:0|low": 26
+      },
+      "B": {
+        "category_x_sales_tier:22|mid": 13,
+        "category_x_sales_tier:20|high": 256,
+        "category_x_sales_tier:8|mid": 124,
+        "category_x_sales_tier:5|low": 65,
+        "category_x_sales_tier:8|high": 64,
+        "category_x_sales_tier:21|low": 117,
+        "category_x_sales_tier:20|low": 145,
+        "category_x_sales_tier:22|high": 16,
+        "category:22": 4,
+        "category_x_sales_tier:24|high": 27,
+        "category_x_sales_tier:25|low": 10,
+        "category_x_sales_tier:25|high": 15,
+        "category_x_sales_tier:18|low": 141,
+        "category_x_sales_tier:30|low": 31,
+        "category_x_sales_tier:31|high": 38,
+        "category:30": 7,
+        "category_x_sales_tier:18|mid": 76,
+        "category:3": 2,
+        "category_x_sales_tier:10|low": 97,
+        "category_x_sales_tier:28|high": 87,
+        "category_x_sales_tier:24|low": 65,
+        "category_x_sales_tier:20|mid": 153,
+        "category_x_sales_tier:24|mid": 47,
+        "management_group:0": 2,
+        "category_x_sales_tier:7|mid": 42,
+        "category_x_sales_tier:10|mid": 109,
+        "category:27": 4,
+        "category:7": 5,
+        "category_x_sales_tier:16|low": 228,
+        "category_x_sales_tier:14|low": 17,
+        "category_x_sales_tier:4|high": 499,
+        "category_x_sales_tier:5|mid": 56,
+        "management_group:4": 3,
+        "category_x_sales_tier:4|low": 263,
+        "category_x_sales_tier:30|mid": 28,
+        "category_x_sales_tier:0|mid": 10,
+        "category_x_sales_tier:31|mid": 75,
+        "category_x_sales_tier:21|high": 77,
+        "category_x_sales_tier:29|high": 228,
+        "category_x_sales_tier:10|high": 78,
+        "category_x_sales_tier:11|high": 18,
+        "category_x_sales_tier:11|mid": 12,
+        "category_x_sales_tier:4|mid": 326,
+        "category:23": 2,
+        "category_x_sales_tier:25|mid": 18,
+        "category_x_sales_tier:8|low": 101,
+        "category:15": 2,
+        "category_x_sales_tier:15|mid": 17,
+        "category_x_sales_tier:11|low": 21,
+        "category_x_sales_tier:16|mid": 312,
+        "category_x_sales_tier:7|low": 53,
+        "category_x_sales_tier:23|low": 17,
+        "category_x_sales_tier:29|mid": 68,
+        "category_x_sales_tier:21|mid": 85,
+        "category_x_sales_tier:27|low": 19,
+        "category_x_sales_tier:16|high": 168,
+        "category_x_sales_tier:18|high": 19,
+        "category_x_sales_tier:23|mid": 12,
+        "category_x_sales_tier:28|low": 46,
+        "category_x_sales_tier:28|mid": 64,
+        "category_x_sales_tier:31|low": 77,
+        "category:0": 2,
+        "category:14": 3,
+        "management_group:3": 13,
+        "category_x_sales_tier:3|low": 7,
+        "category_x_sales_tier:29|low": 53,
+        "category_x_sales_tier:5|high": 45,
+        "category_x_sales_tier:15|low": 49,
+        "category_x_sales_tier:0|low": 26
+      },
+      "C": {
+        "category_x_sales_tier:22|mid": 13,
+        "category_x_sales_tier:20|high": 256,
+        "category_x_sales_tier:8|mid": 124,
+        "category_x_sales_tier:5|low": 65,
+        "category_x_sales_tier:8|high": 64,
+        "category_x_sales_tier:21|low": 117,
+        "category_x_sales_tier:20|low": 145,
+        "category_x_sales_tier:22|high": 16,
+        "category:22": 4,
+        "category_x_sales_tier:24|high": 27,
+        "category_x_sales_tier:25|low": 10,
+        "category_x_sales_tier:25|high": 15,
+        "category_x_sales_tier:18|low": 141,
+        "category_x_sales_tier:30|low": 31,
+        "category_x_sales_tier:31|high": 38,
+        "category:30": 7,
+        "category_x_sales_tier:18|mid": 76,
+        "category:3": 2,
+        "category_x_sales_tier:10|low": 97,
+        "category_x_sales_tier:28|high": 87,
+        "category_x_sales_tier:24|low": 65,
+        "category_x_sales_tier:20|mid": 153,
+        "category_x_sales_tier:24|mid": 47,
+        "management_group:0": 2,
+        "category_x_sales_tier:7|mid": 42,
+        "category_x_sales_tier:10|mid": 109,
+        "category:27": 4,
+        "category:7": 5,
+        "category_x_sales_tier:16|low": 228,
+        "category_x_sales_tier:14|low": 17,
+        "category_x_sales_tier:4|high": 499,
+        "category_x_sales_tier:5|mid": 56,
+        "management_group:4": 3,
+        "category_x_sales_tier:4|low": 263,
+        "category_x_sales_tier:30|mid": 28,
+        "category_x_sales_tier:0|mid": 10,
+        "category_x_sales_tier:31|mid": 75,
+        "category_x_sales_tier:21|high": 77,
+        "category_x_sales_tier:29|high": 228,
+        "category_x_sales_tier:10|high": 78,
+        "category_x_sales_tier:11|high": 18,
+        "category_x_sales_tier:11|mid": 12,
+        "category_x_sales_tier:4|mid": 326,
+        "category:23": 2,
+        "category_x_sales_tier:25|mid": 18,
+        "category_x_sales_tier:8|low": 101,
+        "category:15": 2,
+        "category_x_sales_tier:15|mid": 17,
+        "category_x_sales_tier:11|low": 21,
+        "category_x_sales_tier:16|mid": 312,
+        "category_x_sales_tier:7|low": 53,
+        "category_x_sales_tier:23|low": 17,
+        "category_x_sales_tier:29|mid": 68,
+        "category_x_sales_tier:21|mid": 85,
+        "category_x_sales_tier:27|low": 19,
+        "category_x_sales_tier:16|high": 168,
+        "category_x_sales_tier:18|high": 19,
+        "category_x_sales_tier:23|mid": 12,
+        "category_x_sales_tier:28|low": 46,
+        "category_x_sales_tier:28|mid": 64,
+        "category_x_sales_tier:31|low": 77,
+        "category:0": 2,
+        "category:14": 3,
+        "management_group:3": 13,
+        "category_x_sales_tier:3|low": 7,
+        "category_x_sales_tier:29|low": 53,
+        "category_x_sales_tier:5|high": 45,
+        "category_x_sales_tier:15|low": 49,
+        "category_x_sales_tier:0|low": 26
+      }
+    }
+  },
+  "cost_scenarios": [
+    {
+      "scenario": "excess stock more costly",
+      "c_u": 1,
+      "c_o": 3,
+      "beta": 0.25
+    },
+    {
+      "scenario": "equal costs",
+      "c_u": 1,
+      "c_o": 1,
+      "beta": 0.5
+    },
+    {
+      "scenario": "shortage more costly",
+      "c_u": 3,
+      "c_o": 1,
+      "beta": 0.75
+    }
+  ],
+  "metric_definitions": {
+    "pinball": "rho_tau(d-q) = (d-q)(tau - 1{d<q}), averaged over exact final donor rows",
+    "coverage": "mean 1{D_proxy <= U_tau}",
+    "miss_rate": "1 - coverage",
+    "WAPE": "100 * sum|D_proxy - median forecast| / sum D_proxy (zero-denominator groups reported as NaN)",
+    "bias": "100 * sum(forecast - D_proxy) / sum D_proxy",
+    "newsvendor cost": "c_o (Q-D)_+ + c_u (D-Q)_+ against the unmasked donor proxy",
+    "fill rate": "sum min(Q,D) / sum D",
+    "leftover share": "sum (Q-D)_+ / sum Q",
+    "cycle service": "mean 1{Q >= D}"
+  },
+  "pooling_rules": {
+    "conformal": [
+      "category_x_sales_tier",
+      "category",
+      "management_group",
+      "global"
+    ],
+    "min_pool_size": 200,
+    "km": [
+      "category_x_sales_tier",
+      "category",
+      "management_group",
+      "global"
+    ],
+    "km_min_obs": 200,
+    "km_min_events": 20
+  },
+  "policies": [
+    "seasonal_naive + residual quantile",
+    "raw-sales LightGBM + residual quantile",
+    "raw-sales quantile LightGBM",
+    "demand-quantile LightGBM (uncalibrated)",
+    "demand-quantile LightGBM + pooled conformal",
+    "Kaplan-Meier order percentile",
+    "demand-quantile + adaptive calibration (sensitivity)",
+    "TFT (direct) + residual quantile",
+    "TimesNet->TFT + residual quantile"
+  ],
+  "planned_comparisons": [
+    "3x3 matrix: each of A/B/C trained+calibrated models evaluated on A/B/C test histories, identical donor rows",
+    "per cost ratio: mean/median newsvendor cost, fill rate, leftover share, cycle service",
+    "per quantile: pinball loss, empirical coverage, miss rate",
+    "median forecast: WAPE and signed bias",
+    "transfer gaps Delta^C_{a->b} = mean cost(a,b) - mean cost(a,a)",
+    "paired cluster bootstrap by (city_id, store_id) for the headline differences",
+    "real-recorded-history definite-miss lower bound at the 0.90 quantile"
+  ],
+  "planned_ablations": [
+    "raw-sales model vs demand-quantile model",
+    "uncalibrated vs pooled-conformal quantiles",
+    "global calibration vs category x sales-tier pooling",
+    "A-only training vs mechanism-specific training",
+    "visible-history TFT vs TimesNet->TFT",
+    "seasonal naive vs learned baselines",
+    "static calibration vs adaptive diagnostic",
+    "one-day expiry vs two-day carry-over sensitivity",
+    "excluded target-day weather vs oracle target-day weather (leakage sensitivity)"
+  ],
+  "bootstrap": {
+    "seed": 42,
+    "repetitions": 200,
+    "cluster": "(city_id, store_id)"
+  },
+  "final_test_population": "rows whose ORIGINAL 06:00-21:00 stockout flags are all zero on 2024-06-26..2024-07-02",
+  "tft_models": {
+    "direct_A": "113d6639492d3005bfe75419a610670834c7b8457cde6d81a95a57967dd558f7",
+    "direct_B": "b7b105f7a8c8ec3c57774d0be029ac47db888e3d28dabbe2dce642765581d891",
+    "direct_C": "96393d244490cfff9489554686fb68f8518d595ef2140c17a95ff3051d85d74d",
+    "recovered_A": "6969532a6e2c14338a7acbd577280172b52bd855880b8177db459d4f7e26b0b5",
+    "recovered_B": "bc8e1a7cdb8935f43e7f4a49f0d9f8b4672bcf69c155b03015d8abb4bd435bb7",
+    "recovered_C": "4b0e2ffe46edca026f6bc54b0be9f04ed982c0cce922afe37868b9f6b8dc42df"
+  },
+  "lock_sha256": "4ab12c4bddc06b4bb32ba8825353071b964ef5bfdd423bd4c876ac382180c1b6"
+}

@@ -1,0 +1,25 @@
+{
+  "upstream_status": "PARTIAL",
+  "deep_subsample": 600,
+  "timesnet_config": {
+    "n_layers": 2,
+    "top_k": 7,
+    "d_model": 64,
+    "d_ffn": 32,
+    "n_kernels": 5,
+    "dropout": 0.0,
+    "apply_nonstationary_norm": true
+  },
+  "timesnet_epochs": 4,
+  "tft_grid": [
+    [
+      28,
+      0.03
+    ],
+    [
+      14,
+      0.03
+    ]
+  ],
+  "block_rule": "30-day recovery blocks; a block may feed a forecast only if its last day is strictly before the target day"
+}

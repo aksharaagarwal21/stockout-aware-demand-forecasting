@@ -1,0 +1,21 @@
+{
+  "run_tag": "demo5000",
+  "completed_all_cells_utc": "2026-09-23T01:17:29Z",
+  "phase_status": {
+    "Phase 0": "FAIL",
+    "Phase 1": "PASS",
+    "Phase 2": "PASS",
+    "Phase 3": "PASS",
+    "Phase 4": "PASS"
+  },
+  "failed_checks": [
+    {
+      "phase": "Phase 0",
+      "check": "restart-and-run-all reproduces selected series, split IDs and simulator masks",
+      "detail": "NOT YET VERIFIED: first execution in this output folder"
+    }
+  ],
+  "n_series": 5000,
+  "total_seconds": 1483.8,
+  "fast_mode": false
+}

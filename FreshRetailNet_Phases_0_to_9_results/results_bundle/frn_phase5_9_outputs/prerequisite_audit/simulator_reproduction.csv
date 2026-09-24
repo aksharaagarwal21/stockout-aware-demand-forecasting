@@ -1,0 +1,4 @@
+mechanism,imported_rows_days_1_90,recomputed_rows_days_1_90,rows_added_for_final_week,identical_ids,identical_opening_stock,identical_first_hour,identical_outage,max_visible_total_diff
+A,248739,248739,20641,True,True,True,True,2.294778823852539e-06
+B,248739,248739,20641,True,True,True,True,2.294778823852539e-06
+C,248739,248739,20641,True,True,True,True,1.8477439880371094e-06

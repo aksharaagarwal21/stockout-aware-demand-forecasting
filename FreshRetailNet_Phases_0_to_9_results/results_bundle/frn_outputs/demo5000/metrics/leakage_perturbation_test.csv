@@ -1,0 +1,5 @@
+mechanism,target_day_features_unchanged,next_day_rows_changed_share
+real,True,1.0
+A,True,1.0
+B,True,1.0
+C,True,1.0

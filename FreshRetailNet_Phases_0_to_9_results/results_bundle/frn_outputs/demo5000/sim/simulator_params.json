@@ -1,0 +1,24 @@
+{
+  "params": {
+    "p_refill": 0.1474,
+    "refill_frac": 0.5,
+    "promo_factor": 0.6,
+    "q_floor": 0.1,
+    "k": 1.0,
+    "sigma": 0.25,
+    "k_C": 0.5,
+    "sigma_C": 0.25
+  },
+  "adjusted_on_tuning": false,
+  "selection": "min fit-date pattern loss; if tuning loss > 1.5x fit loss pick best tuning loss among top-5",
+  "loss": "|partial-rate diff| + W1(first slot)/16 + W1(outage hours)/16 + W1(pre-stockout sales share)",
+  "predeclared": [
+    "promo_factor=0.6",
+    "k_C=0.5k",
+    "sigma_C=0.25",
+    "refill_frac=0.5",
+    "q_floor=0.1",
+    "refill lag U{1,2,3}"
+  ],
+  "p_refill": "plug-in: real within-day recovery share on fit dates"
+}

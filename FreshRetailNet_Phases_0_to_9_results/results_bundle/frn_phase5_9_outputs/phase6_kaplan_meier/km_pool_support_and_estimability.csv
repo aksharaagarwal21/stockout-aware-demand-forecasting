@@ -1,0 +1,10 @@
+mechanism,beta,series with an estimable order,NOT_ESTIMABLE share,median order,pool levels used
+A,0.25,5000,0.0,0.4000000059604645,"{'category_x_sales_tier': np.int64(4930), 'category': np.int64(31), 'management_group': np.int64(18)}"
+A,0.5,5000,0.0,0.6000000089406967,"{'category_x_sales_tier': np.int64(4930), 'category': np.int64(31), 'management_group': np.int64(18)}"
+A,0.75,5000,0.0,0.9000000208616257,"{'category_x_sales_tier': np.int64(4930), 'category': np.int64(31), 'management_group': np.int64(18)}"
+B,0.25,5000,0.0,0.4000000059604645,"{'category_x_sales_tier': np.int64(4930), 'category': np.int64(31), 'management_group': np.int64(18)}"
+B,0.5,5000,0.0,0.6000000089406967,"{'category_x_sales_tier': np.int64(4930), 'category': np.int64(31), 'management_group': np.int64(18)}"
+B,0.75,5000,0.0,1.0,"{'category_x_sales_tier': np.int64(4930), 'category': np.int64(31), 'management_group': np.int64(18)}"
+C,0.25,4908,0.0184,0.4000000134110451,"{'category_x_sales_tier': np.int64(4930), 'category': np.int64(31), 'management_group': np.int64(18)}"
+C,0.5,4155,0.169,0.6000000089406967,"{'category_x_sales_tier': np.int64(4930), 'category': np.int64(31), 'management_group': np.int64(18)}"
+C,0.75,1530,0.694,1.2000000178813934,"{'category_x_sales_tier': np.int64(4930), 'category': np.int64(31), 'management_group': np.int64(18)}"

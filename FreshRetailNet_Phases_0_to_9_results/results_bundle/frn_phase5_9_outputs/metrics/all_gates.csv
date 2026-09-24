@@ -1,0 +1,44 @@
+phase,check,status,detail
+Prerequisite,a Phase 0-4 run satisfying every selection rule was found,PASS,"passes every artifact rule and matches the requested 5000-series scale; one open Phase 0-4 check carried forward and printed above: restart-and-run-all reproduces selected series, split IDs and simulator masks"
+Prerequisite,"Phases 0-4 executed in this kernel, without error, before Phases 5-9 began",PASS,"merged notebook; Phase 0-4 gate status {'Phase 0': 'FAIL', 'Phase 1': 'PASS', 'Phase 2': 'PASS', 'Phase 3': 'PASS', 'Phase 4': 'PASS'}; open checks ['restart-and-run-all reproduces selected series, split IDs and simulator masks']"
+Prerequisite,Phase 5-9 reads the same dataset files Phase 0-4 consumed (SHA-256),PASS,"{""train.parquet"": ""6706832db892"", ""eval.parquet"": ""1b1188406642""}"
+Prerequisite,this notebook's simulator reproduces the imported A/B/C masks exactly (days 1-90),PASS,
+Prerequisite,independently rebuilt features equal the imported Phase 0-4 feature tables (A/B/C),PASS,max |diff| = 0
+Prerequisite,"1. hourly arrays have 24 entries (train + eval, selected series)",PASS,"0 malformed in 485,000 rows"
+Prerequisite,2. stock_hour6_22_cnt == sum(hours_stock_status[6:22]),PASS,0 mismatches
+Prerequisite,"3. primary target is sum(hours_sale[6:22]), not the 24-hour sale_amount",PASS,16h/24h total ratio = 0.9516
+Prerequisite,4. no target-day sales / stock flags / weather / promotion enter the features,PASS,unchanged on all histories: True; next-day rows that do change: 1.00
+Prerequisite,5. rolling and lag features are shifted by at least one day,PASS,"lag1 match=True, roll7 match=True"
+Prerequisite,6. A/B/C feature tables share target keys but differ in history,PASS,"identical keys=True; rows differing: {'AvsB': 0.728, 'AvsC': 1.0, 'BvsC': 1.0}"
+Prerequisite,7. quantile models use exact donor proxy labels only,PASS,manifest flag=True; every scored row is a real donor=True; labels match recomputation=True
+Prerequisite,8. models and predictions belong to the expected mechanism and split,PASS,"quantile objective+alpha correct: 12/12 (e.g. A:q25 -> ('quantile', '0.25')); raw-sales objective=regression: True; tuning day range ok: True"
+Prerequisite,9. calibration dates (76-90) were not used for fitting or tuning,PASS,"train_max_day=[60, 60, 60], tuning_max_day=[75, 75, 75]"
+Prerequisite,10. final-evaluation outcomes have not been used yet,PASS,"max day index per artifact: {'sim_records': 89, 'feature_tables': 74, 'tuning_predictions': 74}; eval inspection keys: ['dates', 'n_series', 'note', 'rows', 'rows_per_date']"
+Phase 5,official repository cloned and commit recorded,PASS,8af694a09a5a427d1d50648d348c022565a781f2|Tue Feb 3 20:30:39 
+Phase 5,upstream TimesNet recovery script executed (patched for local data and reduced scale),PASS,"120 series, 2 epochs, 299.4s"
+Phase 5,upstream TFT training script executed in an isolated environment,PASS,"120 series, 1 epoch, 23.2s; predictTFT.py deliberately not run"
+Phase 5,TimesNet recovery scored only on artificially hidden donor hours with known truth,PASS,"290,397 scored hours across A/B/C; genuinely censored hours excluded by construction"
+Phase 5,TFT forecast for day t does not change when day t's own values are scrambled,PASS,"target-day delta 0.00e+00, next-day delta 0.000"
+Phase 5,TFT target is the 06:00-21:00 donor proxy and censored days carry zero loss weight,PASS,weight column = donor indicator; verified by construction in tft_frame()
+Phase 5,A/B/C pipeline identity preserved for cross-mechanism prediction,PASS,"24 frozen (variant, train mechanism, test history) pipelines saved"
+Phase 6,Kaplan-Meier unit tests (hand-computable arrays + package cross-check),PASS,8/8 passed; lifelines: 0.30.3
+Phase 6,"every KM order carries its pool, support count and estimability status",PASS,worst NOT_ESTIMABLE share across mechanisms/betas: 0.694
+Phase 6,KM uses only simulated rows with a known stock threshold (no real stockout rows),PASS,"432,234 simulated donor observations; real censored days are excluded by construction"
+Phase 6,"one frozen KM policy per mechanism, fitted on fitting dates before any final scoring",PASS,"thresholds: MIN_KM_OBSERVATIONS=200, MIN_KM_EXACT_EVENTS=20"
+Phase 7,calibration rows are exact complete donors inside 2024-06-11..2024-06-25 only,PASS,"128,319 donor rows"
+Phase 7,corrected quantiles are ordered after rearrangement,PASS,0.0000 crossing rate
+Phase 7,model weights unchanged: calibration only adds a residual offset,PASS,LightGBM boosters are loaded read-only; corrections are additive constants per pool
+Phase 7,adaptive calibration updates only after exact donor days,PASS,eta=0.05 frozen on tuning days; censored days never update the state
+Phase 7,every residual comes from a complete donor day inside the calibration window,PASS,"513,276 (row, quantile) residuals"
+Phase 7,pool fallbacks are recorded for every corrected prediction,PASS,fallback share: 0.0612
+Phase 7,no final-test outcome entered any correction,PASS,max calibration day index 89 = 2024-06-25
+Phase 8,newsvendor hand calculations pass,PASS,10/10
+Phase 8,a higher shortage cost never lowers the order (within policy),PASS,worst share 1.000000 after the cumulative-maximum rule
+Phase 8,orders and costs are nonnegative,PASS,"1,217,619 development orders"
+Phase 8,order construction never reads the target outcome,PASS,build_orders() receives feature rows only; proxy demand is merged in after the orders exist
+Phase 8,historical stock B and proposed order Q are kept separate,PASS,"B lives only in Phase 6 observations (Z, E); cost is scored against the unmasked donor proxy"
+Phase 8,final protocol lock written before any final-week outcome is read,PASS,4ab12c4bddc06b4b
+Phase 9,"final donor eligibility comes from the original dataset flags, not from A/B/C simulation",PASS,"20,641 rows"
+Phase 9,day-t forecasts are unchanged when day t and every later day are scrambled,PASS,"max |prediction change| = 0.00e+00 on 2,000 rows of 2024-06-29"
+Phase 9,real-history check uses recorded sales as a lower bound and never labels hidden demand,PASS,"lower bound 0.0895 over 105,000 real rows (donor and censored)"
+Phase 9,all predeclared ablations executed or explicitly marked not available,PASS,10 ablations

@@ -1,0 +1,11 @@
+Phase,Component,Status,Evidence,Output location
+Prerequisite,Phase 0-4 audit,PASS,10 checks + simulator/feature reproduction + 33 artifact hashes,prerequisite_audit/
+5,TimesNet (upstream repo),PARTIAL,"commit 8af694a09a5a; as-documented run failed (egress block), patched run exit 0","logs/, phase5_timesnet_tft/"
+5,TFT (upstream repo),PARTIAL,isolated venv numpy 1.26.4 pandas 1.5.3 torch 2.14.0+cu130 pytorch_lightni; trainTFT exit 0; predictTFT not run,logs/upstream_tft_train.log
+5,TimesNet (task-aligned recovery),PASS,"290,397 scored hidden donor hours; WAPE 0.917-0.934",phase5_timesnet_tft/timesnet_recovery_metrics.csv
+5,TFT (task-aligned forecast),PASS,24 frozen pipelines; tuning donor WAPE 0.413-0.453,"phase5_timesnet_tft/, predictions/phase5_tft_predictions.parquet"
+6,Kaplan-Meier,PASS,8/8 unit tests; 207 pools with support counts,phase6_kaplan_meier/
+7,Pooled conformal,PASS,"513,276 calibration residuals; fallback share 0.061; crossing 0 after rearrangement",phase7_calibration/
+8,Ordering policies,PASS,10/10 hand tests; 9 policies; lock 4ab12c4bddc0,"phase8_orders/, manifests/final_test_lock.json"
+9,3x3 transfer matrix,PASS,"20,641 exact final donors x 9 cells; worst off-diagonal cost gap +0.0472",phase9_evaluation/
+9,Real-data consistency check,PASS,"definite-miss lower bound 0.0724-0.0895 over 105,000 real rows",phase9_evaluation/real_history_*

@@ -1,0 +1,5 @@
+use,first_day,last_day,first_date,last_date,n_days,rule
+model_fit,1,60,2024-03-28,2024-05-26,60,Train model weights and fit initial simulator rules.
+tuning,61,75,2024-05-27,2024-06-10,15,Select hyperparameters and check simulator realism.
+calibration,76,90,2024-06-11,2024-06-25,15,Reserved: no fitting/tuning in Phases 0-4; donor counts for a feasibility audit only.
+final_evaluation,91,97,2024-06-26,2024-07-02,7,eval split: schema and row counts only; outcomes are not read in this notebook.

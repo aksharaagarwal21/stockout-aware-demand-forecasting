@@ -1,0 +1,164 @@
+{
+  "A": {
+    "selected": {
+      "num_leaves": 31,
+      "min_data_in_leaf": 200,
+      "best_iter": 302,
+      "tuning_l2_visible": 0.2630139085640254
+    },
+    "params": {
+      "learning_rate": 0.05,
+      "feature_fraction": 0.9,
+      "bagging_fraction": 0.8,
+      "bagging_freq": 1,
+      "lambda_l2": 1.0,
+      "max_bin": 255,
+      "cat_smooth": 10,
+      "max_cat_to_onehot": 4,
+      "seed": 20240628,
+      "deterministic": true,
+      "force_col_wise": true,
+      "num_threads": 2,
+      "verbose": -1,
+      "objective": "regression",
+      "num_leaves": 31,
+      "min_data_in_leaf": 200,
+      "metric": "l2"
+    },
+    "quantile_models": {
+      "0.25": {
+        "best_iter": 316,
+        "tuning_pinball_visible": 0.10860388899464735
+      },
+      "0.5": {
+        "best_iter": 272,
+        "tuning_pinball_visible": 0.1375903251841764
+      },
+      "0.75": {
+        "best_iter": 240,
+        "tuning_pinball_visible": 0.11781216968988202
+      },
+      "0.9": {
+        "best_iter": 344,
+        "tuning_pinball_visible": 0.07291178115779508
+      }
+    },
+    "train_rows": 265000,
+    "tuning_rows": 75000,
+    "train_rows_masked_donor": 66570,
+    "train_rows_genuinely_censored": 120922,
+    "naive_fallback_counts_tuning": {
+      "t-7": 75000
+    },
+    "masked_train_label_equals_visible_total": true,
+    "masked_train_label_below_proxy_share": 0.9987982574733364
+  },
+  "B": {
+    "selected": {
+      "num_leaves": 31,
+      "min_data_in_leaf": 200,
+      "best_iter": 260,
+      "tuning_l2_visible": 0.27139760733554635
+    },
+    "params": {
+      "learning_rate": 0.05,
+      "feature_fraction": 0.9,
+      "bagging_fraction": 0.8,
+      "bagging_freq": 1,
+      "lambda_l2": 1.0,
+      "max_bin": 255,
+      "cat_smooth": 10,
+      "max_cat_to_onehot": 4,
+      "seed": 20240628,
+      "deterministic": true,
+      "force_col_wise": true,
+      "num_threads": 2,
+      "verbose": -1,
+      "objective": "regression",
+      "num_leaves": 31,
+      "min_data_in_leaf": 200,
+      "metric": "l2"
+    },
+    "quantile_models": {
+      "0.25": {
+        "best_iter": 245,
+        "tuning_pinball_visible": 0.10682392867097298
+      },
+      "0.5": {
+        "best_iter": 191,
+        "tuning_pinball_visible": 0.1407145521246471
+      },
+      "0.75": {
+        "best_iter": 251,
+        "tuning_pinball_visible": 0.12338258227542923
+      },
+      "0.9": {
+        "best_iter": 291,
+        "tuning_pinball_visible": 0.07647120576034816
+      }
+    },
+    "train_rows": 265000,
+    "tuning_rows": 75000,
+    "train_rows_masked_donor": 81424,
+    "train_rows_genuinely_censored": 120922,
+    "naive_fallback_counts_tuning": {
+      "t-7": 75000
+    },
+    "masked_train_label_equals_visible_total": true,
+    "masked_train_label_below_proxy_share": 0.9983297307919041
+  },
+  "C": {
+    "selected": {
+      "num_leaves": 31,
+      "min_data_in_leaf": 200,
+      "best_iter": 156,
+      "tuning_l2_visible": 0.327717122230296
+    },
+    "params": {
+      "learning_rate": 0.05,
+      "feature_fraction": 0.9,
+      "bagging_fraction": 0.8,
+      "bagging_freq": 1,
+      "lambda_l2": 1.0,
+      "max_bin": 255,
+      "cat_smooth": 10,
+      "max_cat_to_onehot": 4,
+      "seed": 20240628,
+      "deterministic": true,
+      "force_col_wise": true,
+      "num_threads": 2,
+      "verbose": -1,
+      "objective": "regression",
+      "num_leaves": 31,
+      "min_data_in_leaf": 200,
+      "metric": "l2"
+    },
+    "quantile_models": {
+      "0.25": {
+        "best_iter": 371,
+        "tuning_pinball_visible": 0.0960335641692679
+      },
+      "0.5": {
+        "best_iter": 166,
+        "tuning_pinball_visible": 0.14189412742612015
+      },
+      "0.75": {
+        "best_iter": 333,
+        "tuning_pinball_visible": 0.13666132812611811
+      },
+      "0.9": {
+        "best_iter": 241,
+        "tuning_pinball_visible": 0.08635212541814935
+      }
+    },
+    "train_rows": 265000,
+    "tuning_rows": 75000,
+    "train_rows_masked_donor": 119876,
+    "train_rows_genuinely_censored": 120922,
+    "naive_fallback_counts_tuning": {
+      "t-7": 75000
+    },
+    "masked_train_label_equals_visible_total": true,
+    "masked_train_label_below_proxy_share": 0.9953952417498081
+  }
+}

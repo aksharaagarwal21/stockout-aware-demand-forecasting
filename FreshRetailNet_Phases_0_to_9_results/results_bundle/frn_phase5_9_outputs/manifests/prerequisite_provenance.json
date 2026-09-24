@@ -1,0 +1,210 @@
+{
+  "phase04_run": "/home/claude/merged/frn_outputs/demo5000",
+  "phase04_artifacts": {
+    "data/features_A.parquet": {
+      "sha256": "0f66d9260f8e1eba404231157060e917e0ae530ab1d7f73c4bc61465be1a6bcd",
+      "bytes": 21088902
+    },
+    "data/features_B.parquet": {
+      "sha256": "916932c517c48aabd7e20982af38b05fb262cc48c52b5df82aaf6ed8fde2a938",
+      "bytes": 21689394
+    },
+    "data/features_C.parquet": {
+      "sha256": "bc6ab2eb4a902042553799b34832f8d086b2f3b6c3f73d02285bfa55e9def835",
+      "bytes": 22715221
+    },
+    "sim/sim_records_A.parquet": {
+      "sha256": "f5b52d476ba13795ee18b0121cf703c62e6b4fbbb59642d1c0c13a73a6a15f69",
+      "bytes": 7097171
+    },
+    "sim/sim_records_B.parquet": {
+      "sha256": "b9b17d8a1d791ef95f5a88c4d4ef2285bd9a49743f194faef496c8b78ba68ce4",
+      "bytes": 7367017
+    },
+    "sim/sim_records_C.parquet": {
+      "sha256": "c645d0d0529dd26e1c229550ad5fdbc2084eabbb14de2409d29437ca173f6104",
+      "bytes": 7632161
+    },
+    "models/phase3_raw_l2_A.txt": {
+      "sha256": "26f54354a86f411efed0afa149ccaf5a2b39adfaaf37043929dab97282698cfd",
+      "bytes": 1375258
+    },
+    "models/phase3_raw_l2_B.txt": {
+      "sha256": "cfecd860f6ddf23cd3dfba7d562496908df49fe9adbfb6956ad1af002c0e32a1",
+      "bytes": 1184873
+    },
+    "models/phase3_raw_l2_C.txt": {
+      "sha256": "e33c50630db2c93beeb6e00939312158b6ea0302380803cd39734fea78345246",
+      "bytes": 725230
+    },
+    "models/phase4_demand_q25_A.txt": {
+      "sha256": "812b94c4974771722405ab3daffa786b0989d92545c56b8522eecf2dbdb3afbf",
+      "bytes": 889622
+    },
+    "models/phase4_demand_q50_A.txt": {
+      "sha256": "234407530b82f68b717f733472dd6232830b2ca89fd443e86ef5c74865ee09be",
+      "bytes": 2159834
+    },
+    "models/phase4_demand_q75_A.txt": {
+      "sha256": "c092e6a8ef73dd8a1bc53bd05c67486b1c4158f61b8b9860be9b1c6ea00c0108",
+      "bytes": 13006666
+    },
+    "models/phase4_demand_q90_A.txt": {
+      "sha256": "eace5c7f2d027b145406e52ed33d211a8f3c9931df083e77f7d0fd89671b8057",
+      "bytes": 2336460
+    },
+    "models/phase4_demand_q25_B.txt": {
+      "sha256": "e447e34954d15fe4fd327234624a6e459d80487c318ec2c794be207509433c8f",
+      "bytes": 1809262
+    },
+    "models/phase4_demand_q50_B.txt": {
+      "sha256": "789c4f162b566a221b61a2add2663c5fe270411c4eea281de953e195d985e05d",
+      "bytes": 2083966
+    },
+    "models/phase4_demand_q75_B.txt": {
+      "sha256": "46b79684d9b32cb250c02c93742f33d9817245cb8070eb50e83daed066e0bcc3",
+      "bytes": 11501569
+    },
+    "models/phase4_demand_q90_B.txt": {
+      "sha256": "f3e05ce093f277d333ce1187de0943a73a59c2c5e9666a4df30044993d6d5ca4",
+      "bytes": 4267138
+    },
+    "models/phase4_demand_q25_C.txt": {
+      "sha256": "d796444601cdbf2abd556b8b5e9db60d5e53f0cc17ec4fc45a0193ce090ac791",
+      "bytes": 1817747
+    },
+    "models/phase4_demand_q50_C.txt": {
+      "sha256": "0aa4431dfdc417bc79197180d725760ec81d8200f7e7b5f74ec5c14b711d5bdf",
+      "bytes": 24554823
+    },
+    "models/phase4_demand_q75_C.txt": {
+      "sha256": "8e3e57c482916a290275d65783d0a93dda92bdf24e7a1df7330d47aefaecc943",
+      "bytes": 12958510
+    },
+    "models/phase4_demand_q90_C.txt": {
+      "sha256": "ccd4cc73c699ec5f5f67d58d2002a538075775f7b52aa593488aa6e899715d6d",
+      "bytes": 4829686
+    },
+    "predictions/phase4_tuning_predictions_A.parquet": {
+      "sha256": "fa3f68dd09cbdd5ba7aabae7e57d27401678795e9fe626004739c7fb07140377",
+      "bytes": 3748738
+    },
+    "predictions/phase4_tuning_predictions_B.parquet": {
+      "sha256": "f53321a83f60d7d351c04a15d32f792556ccc98d9ebd23d561b79974bd5c1f45",
+      "bytes": 3748722
+    },
+    "predictions/phase4_tuning_predictions_C.parquet": {
+      "sha256": "e7d79d567e4fbf8622e55be38e83a5a854aeb8b10fff6e9a1ceb936a8685fbe6",
+      "bytes": 3749330
+    },
+    "predictions/phase3_predictions_A.parquet": {
+      "sha256": "24aeb808fc5310180e295ebe45b7e0bc7a825fecc3e676f9824ec5990e73b713",
+      "bytes": 17490567
+    },
+    "predictions/phase3_predictions_B.parquet": {
+      "sha256": "17a01f27e8304094ab69bb783375943ddac49f85f1bfc1cb3c4e10b154b33109",
+      "bytes": 17736678
+    },
+    "predictions/phase3_predictions_C.parquet": {
+      "sha256": "a4e7b0745493e25350f98363aef81b629a896d6b03087a0fb81d4d9cfae142e6",
+      "bytes": 18272276
+    },
+    "manifests/selected_series.parquet": {
+      "sha256": "3edf9b145695e5e8d48e3e7da6ff3a8c17f2817920b4de870cb179a86ce78da4",
+      "bytes": 155796
+    },
+    "manifests/split_manifest.csv": {
+      "sha256": "0e3cb040a4d9ff9b3250b87317325e6a148f69c586ff788588e33e87c69120f8",
+      "bytes": 495
+    },
+    "sim/simulator_params.json": {
+      "sha256": "7faa948994f861d62e8829f70e65d68348b1cb445649d5bbaabeb1ef7eeaccda",
+      "bytes": 652
+    },
+    "models/phase4_model_info.json": {
+      "sha256": "9248f7504fb8446bd3e65ebe7f009c217bcdeafbc0197612c061db1a5ccd2bcc",
+      "bytes": 10094
+    },
+    "models/phase3_model_info.json": {
+      "sha256": "aada6db78b491fd807101f8295eb4216d83829e2db851c4e6ecc969511ebfc29",
+      "bytes": 4212
+    },
+    "manifests/provenance.json": {
+      "sha256": "973c03c1cafaaadaa85769105e8d7b93b3f3fd1877fc2d62f4ebe69eb1c05052",
+      "bytes": 973
+    }
+  },
+  "dataset": {
+    "train.parquet": {
+      "sha256": "6706832db892bbae4969c19d87e07975d2543d2ba7d7d4756360654785de5a3d",
+      "bytes": 106436287
+    },
+    "eval.parquet": {
+      "sha256": "1b118840664280c6b88bffc84c80ee1f54c05d911e354b7599e5da10995e960e",
+      "bytes": 8440124
+    }
+  },
+  "phase04_provenance": {
+    "run_started_utc": "2026-09-23T00:52:45Z",
+    "config": {
+      "RUN_TAG": "demo5000",
+      "SEED": 20240628,
+      "FAST_MODE": false,
+      "SAMPLE_N_SERIES": 5000,
+      "SMOKE_N_SERIES": 10,
+      "FULL_RUN": false,
+      "N_THREADS": 2
+    },
+    "python": "3.11.15",
+    "packages": {
+      "numpy": "2.4.4",
+      "pandas": "2.3.3",
+      "pyarrow": "25.0.1",
+      "lightgbm": "4.7.0",
+      "matplotlib": "3.10.9",
+      "scipy": "1.17.1",
+      "duckdb": "1.5.5",
+      "psutil": "7.2.2",
+      "ipykernel": "7.3.0",
+      "nbclient": "0.11.0"
+    },
+    "machine": {
+      "platform": "Linux-6.18.44-fc-v37-x86_64-with-glibc2.39",
+      "processor": "x86_64",
+      "logical_cpus": 2,
+      "ram_GB": 8.42
+    },
+    "source_files": {
+      "train.parquet": {
+        "sha256": "6706832db892bbae4969c19d87e07975d2543d2ba7d7d4756360654785de5a3d",
+        "bytes": 106436287
+      },
+      "eval.parquet": {
+        "sha256": "1b118840664280c6b88bffc84c80ee1f54c05d911e354b7599e5da10995e960e",
+        "bytes": 8440124
+      }
+    }
+  },
+  "phase04_run_status": {
+    "run_tag": "demo5000",
+    "completed_all_cells_utc": "2026-09-23T01:17:29Z",
+    "phase_status": {
+      "Phase 0": "FAIL",
+      "Phase 1": "PASS",
+      "Phase 2": "PASS",
+      "Phase 3": "PASS",
+      "Phase 4": "PASS"
+    },
+    "failed_checks": [
+      {
+        "phase": "Phase 0",
+        "check": "restart-and-run-all reproduces selected series, split IDs and simulator masks",
+        "detail": "NOT YET VERIFIED: first execution in this output folder"
+      }
+    ],
+    "n_series": 5000,
+    "total_seconds": 1483.8,
+    "fast_mode": false
+  },
+  "dataset_hash_matches_phase04": true
+}

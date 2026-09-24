@@ -1,0 +1,47 @@
+feature,source,latest_permitted_source,note,all_rows_before_target
+y_lag1,timeline visible hourly sales / stock flags (06-21),t-1,,True
+y_lag2,timeline visible hourly sales / stock flags (06-21),t-1,,True
+y_lag7,timeline visible hourly sales / stock flags (06-21),t-1,,True
+y_lag14,timeline visible hourly sales / stock flags (06-21),t-1,,True
+y_roll7,timeline visible hourly sales / stock flags (06-21),t-1,,True
+y_roll14,timeline visible hourly sales / stock flags (06-21),t-1,,True
+y_roll28,timeline visible hourly sales / stock flags (06-21),t-1,,True
+y_std14,timeline visible hourly sales / stock flags (06-21),t-1,,True
+y_exp,timeline visible hourly sales / stock flags (06-21),t-1,,True
+y_dow_mean,timeline visible hourly sales / stock flags (06-21),t-1,,True
+y_don_roll14,timeline visible hourly sales / stock flags (06-21),t-1,,True
+y_don_roll28,timeline visible hourly sales / stock flags (06-21),t-1,,True
+morn_share_lag1,timeline visible hourly sales / stock flags (06-21),t-1,,True
+so_lag1,timeline visible hourly sales / stock flags (06-21),t-1,,True
+so_rate7,timeline visible hourly sales / stock flags (06-21),t-1,,True
+so_rate14,timeline visible hourly sales / stock flags (06-21),t-1,,True
+so_rate_exp,timeline visible hourly sales / stock flags (06-21),t-1,,True
+don_frac7,timeline visible hourly sales / stock flags (06-21),t-1,,True
+first_so_lag1,timeline visible hourly sales / stock flags (06-21),t-1,,True
+y_lag1_na,timeline visible hourly sales / stock flags (06-21),t-1,,True
+y_lag7_na,timeline visible hourly sales / stock flags (06-21),t-1,,True
+y_lag14_na,timeline visible hourly sales / stock flags (06-21),t-1,,True
+y_don_roll14_na,timeline visible hourly sales / stock flags (06-21),t-1,,True
+sales_tier_past,timeline visible hourly sales / stock flags (06-21),t-1,"digitize(y_exp) with fit-period tertile edges (a global constant, like a scaler)",True
+so_tier_past,timeline visible hourly sales / stock flags (06-21),t-1,digitize(so_rate_exp) with fit-period tertile edges (a global constant),True
+disc_lag1,recorded discount/activity/holiday/weather of past days,t-1,,True
+act_lag1,recorded discount/activity/holiday/weather of past days,t-1,,True
+hol_lag1,recorded discount/activity/holiday/weather of past days,t-1,,True
+precpt_lag1,recorded discount/activity/holiday/weather of past days,t-1,,True
+temp_lag1,recorded discount/activity/holiday/weather of past days,t-1,,True
+hum_lag1,recorded discount/activity/holiday/weather of past days,t-1,,True
+wind_lag1,recorded discount/activity/holiday/weather of past days,t-1,,True
+disc_roll7,recorded discount/activity/holiday/weather of past days,t-1,,True
+act_roll7,recorded discount/activity/holiday/weather of past days,t-1,,True
+dow,pre-published calendar (target date's calendar attributes are known at t-1),t-1,,True
+is_weekend,pre-published calendar (target date's calendar attributes are known at t-1),t-1,,True
+cn_holiday,pre-published calendar (target date's calendar attributes are known at t-1),t-1,,True
+cn_makeup_workday,pre-published calendar (target date's calendar attributes are known at t-1),t-1,,True
+n_hist_days,count of past days in panel,t-1,,True
+city_id,static series identity/category (treated as categorical),n/a (static),time-invariant,True
+store_id,static series identity/category (treated as categorical),n/a (static),time-invariant,True
+product_id,static series identity/category (treated as categorical),n/a (static),time-invariant,True
+management_group_id,static series identity/category (treated as categorical),n/a (static),time-invariant,True
+first_category_id,static series identity/category (treated as categorical),n/a (static),time-invariant,True
+second_category_id,static series identity/category (treated as categorical),n/a (static),time-invariant,True
+third_category_id,static series identity/category (treated as categorical),n/a (static),time-invariant,True
